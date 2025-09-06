@@ -9,8 +9,16 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@skeletonlabs/skeleton": "^3.2.0",
+    "@skeletonlabs/skeleton-svelte": "^1.5.1",
     "@sveltejs/vite-plugin-svelte": "^6.1.1",
     "svelte": "^5.38.1",
     "vite": "^7.1.2"
+  },
+  "dependencies": {
+    "@lucide/svelte": "^0.542.0",
+    "@tailwindcss/vite": "^4.1.13",
+    "svelte-spa-router": "^4.0.1",
+    "tailwindcss": "^4.1.13"
   }
 }
