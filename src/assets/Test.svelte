@@ -1,3 +1,28 @@
+<!-- Testimonials.svelte: 
+
+<script lang="ts">
+  import Cards from "./Cards.svelte";
+</script>
+
+<h1 class="h1 my-3.5">This is Testimonials page: </h1>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 md:px-10 lg:px-20">
+  
+  <Cards classs={"card p-4 preset-filled-tertiary-500"}/>
+  <Cards classs={"card p-4 preset-filled-warning-500"}/>
+  <Cards classs={"card p-4 preset-filled-primary-500"}/>
+  <Cards classs={"card p-4 preset-tonal-surface"}/>
+  <Cards classs={"card p-4 preset-filled-secondary-500"}/>
+
+</div> -->
+
+
+<!-- =================================================== -->
+
+
+<!-- Navigation.svelte:  -->
+
+
+
 <!-- <script lang="ts">
   import { Navigation } from '@skeletonlabs/skeleton-svelte';
   import IconMenu from '@lucide/svelte/icons/menu';
@@ -10,13 +35,22 @@
   import { push } from 'svelte-spa-router';
   import Routes from "./routes/Routes.svelte";
 
-  let isExpansed = $state(true);
+  // let isExpansed = $state(false);
+  let isExpansed = false;
+
+  $: (() => {
+		if (window.innerWidth >= 768) {
+			isExpansed = true; // default open for laptops/tabs
+		}
+	});
+
   function toggleExpanded() {
     isExpansed = !isExpansed;
   }
 </script>
 
-<div class="grid grid-cols-[auto_1fr] w-full h-full">
+
+<div class="border-t-1 grid grid-cols-[auto_1fr] w-full h-full bg-green-200">
   <Navigation.Rail expanded={isExpansed}>
     {#snippet header()}
       <Navigation.Tile labelExpanded="Menu" onclick={toggleExpanded} title="Toggle Menu Width"><IconMenu /></Navigation.Tile>
@@ -43,9 +77,10 @@
     {/snippet}
   </Navigation.Rail>
 
-  <div class="overflow-y-auto p-4 md:p-10 lg:p-20">
+  <div class="overflow-y-auto p-4 md:p-10 lg:p-20 bg-red-300">
     <Routes />
-</div>
-
+  </div>
 
 </div> -->
+
+
