@@ -50,7 +50,7 @@
 </script>
 
 
-<div class="relative w-full h-full bg-green-200">
+<div class="relative w-full h-full my-2 bg-red-300">
   
   <!-- Mobile Overlay -->
   {#if isMobile && isExpansed}
@@ -116,7 +116,7 @@
         {/snippet}
 
         {#snippet footer()}
-          <Navigation.Tile labelExpanded="Settings" href="/settings" title="Settings">
+          <Navigation.Tile labelExpanded="Settings" title="Settings" onclick={() => handleMobileNavClick(() => push('/settings'))}  >
             <IconSettings />
           </Navigation.Tile>
         {/snippet}
@@ -125,7 +125,7 @@
 
     <!-- Main Content -->
     <div class={`
-      overflow-y-auto p-4 md:p-10 lg:p-20 bg-red-300
+      overflow-y-auto p-4 md:p-10 lg:p-20
       ${isMobile ? 'w-full h-full' : ''}
     `}>
       <!-- Mobile Menu Button - Only show when sidebar is closed on mobile -->

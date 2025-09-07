@@ -12,7 +12,7 @@
   <!-- Top App Bar -->
   <AppBar>
     {#snippet lead()}
-      <ArrowLeft size={24} />
+      <!-- <ArrowLeft size={24} /> -->
     {/snippet}
     {#snippet trail()}
       <Paperclip size={20} />
